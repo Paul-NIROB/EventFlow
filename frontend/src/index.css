@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-text font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+.glass {
+  @apply bg-dark-card backdrop-blur-md border border-white/10;
+}
+
+.glass-hover {
+  @apply hover:bg-white/10 transition-all duration-300;
+}

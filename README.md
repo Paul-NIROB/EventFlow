@@ -31,21 +31,25 @@ A modern, full-stack event management platform built with FastAPI and React.
 - Python 3.8+
 - Node.js 16+
 
-### Setup
+### Deployment (Render)
 
-1. **Backend Setup**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   uvicorn main:app --reload
-   ```
+### **Backend**
+1. **New > Web Service**
+2. **Root Directory**: `backend`
+3. **Environment**: `Python`
+4. **Build Command**: `pip install -r requirements.txt`
+5. **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+6. **Environment Variables**:
+   - `DATABASE_URL`: (Optional, defaults to sqlite)
+   - `SECRET_KEY`: (Your secret key for JWT)
 
-2. **Frontend Setup**
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
+### **Frontend**
+1. **New > Static Site**
+2. **Root Directory**: `frontend`
+3. **Build Command**: `npm run build`
+4. **Publish Directory**: `dist`
+5. **Environment Variables**:
+   - `VITE_API_URL`: Your backend URL (e.g., `https://eventflow-api.onrender.com`)
 
 ## Design System
 

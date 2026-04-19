@@ -8,6 +8,7 @@ import models, schemas, crud, auth
 from database import engine, get_db
 
 # Create database tables
+# This will create the sqlite database file if it doesn't exist
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="EventFlow API")
